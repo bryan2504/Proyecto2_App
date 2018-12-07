@@ -1,0 +1,9 @@
+<% if signed_in? %>
+<h1>New Leccion Kanji</h1>
+
+<%= render 'form', leccion_kanji: @leccion_kanji %>
+
+<%= link_to 'Back', leccion_kanjis_path %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

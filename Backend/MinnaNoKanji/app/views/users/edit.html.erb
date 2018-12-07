@@ -1,0 +1,11 @@
+<% if signed_in? %>
+<h1>Editing Users</h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
+
+<% else %>
+ <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

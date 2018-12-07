@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @curiosidades_japon.tipo %>
+</p>
+
+<p>
+  <strong>Explicacion:</strong>
+  <%= @curiosidades_japon.explicacion %>
+</p>
+
+<p>
+  <strong>Url imagen:</strong>
+  <%= @curiosidades_japon.url_imagen %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @curiosidades_japon.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_curiosidades_japon_path(@curiosidades_japon) %> |
+<%= link_to 'Back', curiosidades_japons_path %>

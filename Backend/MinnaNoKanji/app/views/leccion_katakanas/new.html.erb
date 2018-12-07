@@ -1,0 +1,9 @@
+<% if signed_in? %>
+<h1>New Leccion Katakana</h1>
+
+<%= render 'form', leccion_katakana: @leccion_katakana %>
+
+<%= link_to 'Back', leccion_katakanas_path %>
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

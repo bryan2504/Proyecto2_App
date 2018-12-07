@@ -1,0 +1,2 @@
+module CuriosidadesJaponsHelper
+end

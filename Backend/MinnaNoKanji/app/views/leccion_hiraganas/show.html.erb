@@ -1,0 +1,28 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Leccion:</strong>
+  <%= @leccion_hiragana.leccion %>
+</p>
+
+<p>
+  <strong>Significado:</strong>
+  <%= @leccion_hiragana.significado %>
+</p>
+
+<p>
+  <strong>Url imagen:</strong>
+  <%= @leccion_hiragana.url_imagen %>
+</p>
+
+<p>
+  <strong>Hiragana:</strong>
+  <%= @leccion_hiragana.hiragana %>
+</p>
+
+<%= link_to 'Edit', edit_leccion_hiragana_path(@leccion_hiragana) %> |
+<%= link_to 'Back', leccion_hiraganas_path %>
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

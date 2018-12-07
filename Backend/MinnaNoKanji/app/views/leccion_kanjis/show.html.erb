@@ -1,0 +1,48 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Leccion:</strong>
+  <%= @leccion_kanji.leccion %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @leccion_kanji.numero %>
+</p>
+
+<p>
+  <strong>Significado:</strong>
+  <%= @leccion_kanji.significado %>
+</p>
+
+<p>
+  <strong>Imagen kanji:</strong>
+  <%= @leccion_kanji.imagen_kanji %>
+</p>
+
+<p>
+  <strong>Imagen trazos:</strong>
+  <%= @leccion_kanji.imagen_trazos %>
+</p>
+
+<p>
+  <strong>Explicacion:</strong>
+  <%= @leccion_kanji.explicacion %>
+</p>
+
+<p>
+  <strong>Extra:</strong>
+  <%= @leccion_kanji.extra %>
+</p>
+
+<p>
+  <strong>Kanji:</strong>
+  <%= @leccion_kanji.kanji %>
+</p>
+
+<%= link_to 'Edit', edit_leccion_kanji_path(@leccion_kanji) %> |
+<%= link_to 'Back', leccion_kanjis_path %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

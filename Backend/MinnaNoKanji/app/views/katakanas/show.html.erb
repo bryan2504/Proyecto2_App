@@ -1,0 +1,18 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Leccion:</strong>
+  <%= @katakana.leccion %>
+</p>
+
+<p>
+  <strong>Explicacion:</strong>
+  <%= @katakana.explicacion %>
+</p>
+
+<%= link_to 'Edit', edit_katakana_path(@katakana) %> |
+<%= link_to 'Back', katakanas_path %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

@@ -1,0 +1,18 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Leccion:</strong>
+  <%= @hiragana.leccion %>
+</p>
+
+<p>
+  <strong>Explicacion:</strong>
+  <%= @hiragana.explicacion %>
+</p>
+
+<%= link_to 'Edit', edit_hiragana_path(@hiragana) %> |
+<%= link_to 'Back', hiraganas_path %>
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

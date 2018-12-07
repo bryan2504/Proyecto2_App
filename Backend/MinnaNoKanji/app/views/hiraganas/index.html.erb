@@ -1,0 +1,34 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<h1>Hiraganas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Leccion</th>
+      <th>Explicacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hiraganas.each do |hiragana| %>
+      <tr>
+        <td><%= hiragana.leccion %></td>
+        <td><%= hiragana.explicacion %></td>
+        <td><%= link_to 'Show', hiragana %></td>
+        <td><%= link_to 'Edit', edit_hiragana_path(hiragana) %></td>
+        <td><%= link_to 'Destroy', hiragana, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hiragana', new_hiragana_path %>
+
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

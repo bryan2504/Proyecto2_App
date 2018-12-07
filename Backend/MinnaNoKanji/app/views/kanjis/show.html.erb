@@ -1,0 +1,23 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Leccion:</strong>
+  <%= @kanji.leccion %>
+</p>
+
+<p>
+  <strong>Explicacion:</strong>
+  <%= @kanji.explicacion %>
+</p>
+
+<p>
+  <strong>Parte:</strong>
+  <%= @kanji.parte %>
+</p>
+
+<%= link_to 'Edit', edit_kanji_path(@kanji) %> |
+<%= link_to 'Back', kanjis_path %>
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección.</h1>
+<% end %>

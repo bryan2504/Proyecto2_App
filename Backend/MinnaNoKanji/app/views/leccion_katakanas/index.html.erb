@@ -1,0 +1,37 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<h1>Leccion Katakanas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Leccion</th>
+      <th>Significado</th>
+      <th>Url imagen</th>
+      <th>Katakana</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leccion_katakanas.each do |leccion_katakana| %>
+      <tr>
+        <td><%= leccion_katakana.leccion %></td>
+        <td><%= leccion_katakana.significado %></td>
+        <td><%= leccion_katakana.url_imagen %></td>
+        <td><%= leccion_katakana.katakana %></td>
+        <td><%= link_to 'Show', leccion_katakana %></td>
+        <td><%= link_to 'Edit', edit_leccion_katakana_path(leccion_katakana) %></td>
+        <td><%= link_to 'Destroy', leccion_katakana, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Leccion Katakana', new_leccion_katakana_path %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

@@ -1,0 +1,41 @@
+<% if signed_in? %>
+<%= form_with(model: leccion_katakana, local: true) do |form| %>
+  <% if leccion_katakana.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(leccion_katakana.errors.count, "error") %> prohibited this leccion_katakana from being saved:</h2>
+
+      <ul>
+      <% leccion_katakana.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :leccion %>
+    <%= form.text_field :leccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :significado %>
+    <%= form.text_field :significado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url_imagen %>
+    <%= form.text_field :url_imagen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :katakana_id %>
+    <%= form.text_field :katakana_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Curiosidades Japons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Explicacion</th>
+      <th>Url imagen</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @curiosidades_japons.each do |curiosidades_japon| %>
+      <tr>
+        <td><%= curiosidades_japon.tipo %></td>
+        <td><%= curiosidades_japon.explicacion %></td>
+        <td><%= curiosidades_japon.url_imagen %></td>
+        <td><%= curiosidades_japon.fecha %></td>
+        <td><%= link_to 'Show', curiosidades_japon %></td>
+        <td><%= link_to 'Edit', edit_curiosidades_japon_path(curiosidades_japon) %></td>
+        <td><%= link_to 'Destroy', curiosidades_japon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curiosidades Japon', new_curiosidades_japon_path %>

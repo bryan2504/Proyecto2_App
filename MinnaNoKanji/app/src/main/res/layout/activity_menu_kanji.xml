@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuKanji">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/magic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/buttonIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#536dfe"
+                android:onClick="leccion"
+                android:text="Introducción"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/part1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3f51b5"
+                android:text="Primera Parte ↓"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/listaLecciones1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/listaParte1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/part2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3f51b5"
+                android:text="Segunda Parte ↓"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/listaLecciones2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/buttonLecc4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C5CAE9"
+                    android:onClick="leccion"
+                    android:shadowColor="#ffffff"
+                    android:text="Lección 4"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/buttonLecc5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C5CAE9"
+                    android:onClick="leccion"
+                    android:text="Lección 5"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/buttonLecc6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C5CAE9"
+                    android:onClick="leccion"
+                    android:text="Lección 6"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/part3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3f51b5"
+                android:text="Tercera Parte ↓"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/listaLecciones3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/buttonLecc7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C5CAE9"
+                    android:onClick="leccion"
+                    android:shadowColor="#ffffff"
+                    android:text="Lección 7"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/buttonLecc8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C5CAE9"
+                    android:onClick="leccion"
+                    android:text="Lección 8"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/buttonLecc9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C5CAE9"
+                    android:onClick="leccion"
+                    android:text="Lección 9"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

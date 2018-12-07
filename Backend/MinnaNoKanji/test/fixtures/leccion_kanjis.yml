@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  leccion: MyString
+  numero: MyString
+  significado: MyString
+  imagen_kanji: MyString
+  imagen_trazos: MyString
+  explicacion: MyString
+  extra: MyString
+  kanji: one
+
+two:
+  leccion: MyString
+  numero: MyString
+  significado: MyString
+  imagen_kanji: MyString
+  imagen_trazos: MyString
+  explicacion: MyString
+  extra: MyString
+  kanji: two

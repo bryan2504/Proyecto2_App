@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MinnaNoKanji</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application'%>
+    <%= javascript_include_tag 'application'%>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <header>
+      <nav class="be-blue white large-padding">
+        <ul class="no-list row center-xs middle-xs">
+          <li class="col-md">
+          <% if signed_in?%>
+            <h1 class="logo">
+              <%= link_to "Backend Minna no Kanji", root_path %>
+            </h1>
+            <li class="col-md">
+              <%= link_to "Usuarios", users_path%>
+            </li>
+            <li class="col-md">
+              <%= link_to "Kanjis", kanjis_path%>
+            </li>
+            <li class="col-md">
+              <%= link_to "Hiragana", hiraganas_path%>
+            </li>
+            <li class="col-md">
+              <%= link_to "Katakana", katakanas_path%>
+            </li>
+            <li class="col-md">
+              <%= link_to "Lecciones Kanji", leccion_kanjis_path%>
+            </li>
+            <li class="col-md">
+              <%= link_to "Lecciones Hiragana", leccion_hiraganas_path%>
+            </li>
+            <li class="col-md">
+              <%= link_to "Lecciones Katakana", leccion_katakanas_path%>
+            </li> 
+            <li class="col-md">
+              <%= link_to "Curiosidades Japón", curiosidades_japons_path%>
+            </li>        
+            <li class="col-md">
+              <%= link_to "Cerrrar sesión", destroy_administrator_session_path, method: :delete %>
+            </li>
+            
+            <%else%>
+              <h1 class="logo">
+                <%= link_to "Backend Minna no Kanji", root_path %>
+              </h1>
+              <li class="col-md">
+                <%= link_to "Iniciar sesión", new_administrator_session_path%>
+              </li>      
+            <%end%>
+          
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <%= yield %>
+  </body>
+</html>

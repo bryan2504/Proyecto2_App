@@ -1,0 +1,57 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body{
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.red-text{
+	color:#E74C3C !important;
+}
+
+.blue-text{
+	color:#040dd9 !important;
+}
+
+
+.btn{
+	background-color: inherit;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	width: 100px;
+	height: 40px;
+}
+
+.be-blue{
+	background-color: rgb(71,108,255);
+}
+
+.white{
+	color: white;
+}
+
+.blue{
+	color: blue;
+}
+
+.large-padding{
+	padding: 10px 7px;
+}
+
+a,a:visited{
+	color: inherit;
+	text-decoration: none;
+}
+
+.logo{
+	margin:0px;
+	font-size: 1.2em;
+}
+
+.no-list{
+	list-style-type: none;
+}

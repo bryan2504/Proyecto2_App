@@ -1,0 +1,41 @@
+<% if signed_in? %>
+<%= form_with(model: leccion_hiragana, local: true) do |form| %>
+  <% if leccion_hiragana.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(leccion_hiragana.errors.count, "error") %> prohibited this leccion_hiragana from being saved:</h2>
+
+      <ul>
+      <% leccion_hiragana.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :leccion %>
+    <%= form.text_field :leccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :significado %>
+    <%= form.text_field :significado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url_imagen %>
+    <%= form.text_field :url_imagen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hiragana_id %>
+    <%= form.text_field :hiragana_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

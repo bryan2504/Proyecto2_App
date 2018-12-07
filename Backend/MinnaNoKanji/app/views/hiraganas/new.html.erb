@@ -1,0 +1,9 @@
+<% if signed_in? %>
+<h1>New Hiragana</h1>
+
+<%= render 'form', hiragana: @hiragana %>
+
+<%= link_to 'Back', hiraganas_path %>
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

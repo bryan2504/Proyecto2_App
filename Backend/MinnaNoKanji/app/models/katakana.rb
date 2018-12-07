@@ -1,0 +1,2 @@
+class Katakana < ApplicationRecord
+end

@@ -1,0 +1,24 @@
+<% if signed_in? %>
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @user.email %>
+	</p>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @user.name %>
+	</p>
+
+	<p>
+	  <strong>Nickname:</strong>
+	  <%= @user.nickname %>
+	</p>
+
+	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Back', users_path %>
+
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

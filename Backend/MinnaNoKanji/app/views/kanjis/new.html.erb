@@ -1,0 +1,10 @@
+<% if signed_in? %>
+<h1>New Kanji</h1>
+
+<%= render 'form', kanji: @kanji %>
+
+<%= link_to 'Back', kanjis_path %>
+
+<% else %>
+  <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

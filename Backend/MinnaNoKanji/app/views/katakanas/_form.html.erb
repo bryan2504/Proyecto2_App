@@ -1,0 +1,31 @@
+<% if signed_in? %>
+<%= form_with(model: katakana, local: true) do |form| %>
+  <% if katakana.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(katakana.errors.count, "error") %> prohibited this katakana from being saved:</h2>
+
+      <ul>
+      <% katakana.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :leccion %>
+    <%= form.text_field :leccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :explicacion %>
+    <%= form.text_field :explicacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

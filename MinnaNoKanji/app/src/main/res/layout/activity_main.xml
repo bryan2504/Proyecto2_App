@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bryan.minnanokanji.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@android:drawable/ic_lock_lock" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:text="Minna No Kanji"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:text="Inicio de Sesión"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextMEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Correo Electrónico"
+            android:ems="10"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextMPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextMEmail"
+            android:layout_below="@+id/editTextMEmail"
+            android:layout_marginTop="60dp"
+            android:contentDescription="Contraseña"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonMRegister"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_alignTop="@+id/buttonMinit"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:text="Registrarse"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/buttonMinit"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="71dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:text="Iniciar Sesión"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

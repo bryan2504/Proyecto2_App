@@ -1,0 +1,28 @@
+<% if signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Leccion:</strong>
+  <%= @leccion_katakana.leccion %>
+</p>
+
+<p>
+  <strong>Significado:</strong>
+  <%= @leccion_katakana.significado %>
+</p>
+
+<p>
+  <strong>Url imagen:</strong>
+  <%= @leccion_katakana.url_imagen %>
+</p>
+
+<p>
+  <strong>Katakana:</strong>
+  <%= @leccion_katakana.katakana %>
+</p>
+
+<%= link_to 'Edit', edit_leccion_katakana_path(@leccion_katakana) %> |
+<%= link_to 'Back', leccion_katakanas_path %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

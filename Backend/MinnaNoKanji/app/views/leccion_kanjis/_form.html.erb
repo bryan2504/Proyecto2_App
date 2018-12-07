@@ -1,0 +1,61 @@
+<% if signed_in? %>
+<%= form_with(model: leccion_kanji, local: true) do |form| %>
+  <% if leccion_kanji.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(leccion_kanji.errors.count, "error") %> prohibited this leccion_kanji from being saved:</h2>
+
+      <ul>
+      <% leccion_kanji.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :leccion %>
+    <%= form.text_field :leccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :significado %>
+    <%= form.text_field :significado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagen_kanji %>
+    <%= form.text_field :imagen_kanji %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagen_trazos %>
+    <%= form.text_field :imagen_trazos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :explicacion %>
+    <%= form.text_field :explicacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extra %>
+    <%= form.text_field :extra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kanji_id %>
+    <%= form.text_field :kanji_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<% else %>
+   <h1>Necesita hacer login para acceder a esa dirección</h1>
+<% end %>

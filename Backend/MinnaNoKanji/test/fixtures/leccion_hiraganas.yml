@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  leccion: MyString
+  significado: MyString
+  url_imagen: MyString
+  hiragana: one
+
+two:
+  leccion: MyString
+  significado: MyString
+  url_imagen: MyString
+  hiragana: two
